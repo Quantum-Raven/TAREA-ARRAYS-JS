@@ -38,7 +38,7 @@ console.log(palabrasTerminanConA(palabras)) // -> true
 // 4.1 Crea una función llamada `buscaPalabras` que reciba dos parámetros: un array `words` y una palabra `word`.
 // Busca el índice de la palabra en el array y devuelve todas las palabras después de ese índice en un nuevo array
 function buscaPalabras(words, word) {
-    index = words.indexOf(word);
+    let index = words.indexOf(word);
 
     if (index === -1) {
         return [];

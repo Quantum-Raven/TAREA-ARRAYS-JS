@@ -79,11 +79,17 @@ console.log(position); // -> [0, 2]
 function findMinMaxPages(books) {
     let max = 0;
     let min = 0;
-    for (let i = 0; max < books.length; i++) {
-        if (i > max) {
+
+    for (let i = 1; i < books.length; i++) {
+        if (books[i] > books[max]) {
             max = i;
         }
+        if (books[i] < books[min]) {
+            min = i;
+        }
     }
+
+    return [min, max];
 }
 
 const libros = [350, 120, 540, 275, 390, 130, 670];
